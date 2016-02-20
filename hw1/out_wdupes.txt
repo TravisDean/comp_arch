@@ -1,0 +1,30 @@
+i=0 this process 52649 spawned with pID=52650
+i=0 this process 52650 spawned with pID=0       2 
+i=1 this process 52649 spawned with pID=52658
+i=1 this process 52650 spawned with pID=52651
+i=1 this process 52651 spawned with pID=0
+i=1 this process 52658 spawned with pID=0       4
+i=2 this process 52649 spawned with pID=52662
+i=2 this process 52650 spawned with pID=52655
+i=2 this process 52651 spawned with pID=52652
+i=2 this process 52652 spawned with pID=0
+i=2 this process 52655 spawned with pID=0
+i=2 this process 52658 spawned with pID=52659
+i=2 this process 52659 spawned with pID=0
+i=2 this process 52662 spawned with pID=0       8
+i=3 this process 52649 spawned with pID=52664
+i=3 this process 52650 spawned with pID=52657
+i=3 this process 52651 spawned with pID=52654
+i=3 this process 52652 spawned with pID=52653
+i=3 this process 52653 spawned with pID=0
+i=3 this process 52654 spawned with pID=0
+i=3 this process 52655 spawned with pID=52656
+i=3 this process 52656 spawned with pID=0
+i=3 this process 52657 spawned with pID=0
+i=3 this process 52658 spawned with pID=52661
+i=3 this process 52659 spawned with pID=52660
+i=3 this process 52660 spawned with pID=0
+i=3 this process 52661 spawned with pID=0
+i=3 this process 52662 spawned with pID=52663
+i=3 this process 52663 spawned with pID=0
+i=3 this process 52664 spawned with pID=0       16

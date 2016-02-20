@@ -1,0 +1,7 @@
+A good system can't have a weak command language.
+0 1 1 2 3 5
+4 0
+6 21 MadMad
+mfcdhg
+4 3 2 1 5 6
+22

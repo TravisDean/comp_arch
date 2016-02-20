@@ -1,0 +1,175 @@
+Logical shift right 31 into ebx         (with 75, this results in 0)
+Add ebx onto eax                        (0 + 14 = 14)
+Arithmetic shift right 1 on eax         (14 -> 7)
+Add rax, rsi*1 into ebx                 (7)
+Compare edi and ebx                     (7 <= 14            -- damn GAS syntax swapping)
+    Jump down to +33
+    move ebx into eax
+    compare edi and ebx                 (7 >= 14, again)
+    if Yes, jump to end of function
+    Else:
+        Add 1 to ebx into esi           (7+1 -> 8)
+        And call the function again
+        
+
+Second call
+eax = 6, ebx = 0 after shift
+eax = 3 after sar
+ebx = 11 after lea(+14)
+comparing edi and ebx                   (11 <= 14)
+    Yes, jump down
+    eax = 11 after move from ebx
+    compare edi and ebx                 (11 >= 14)
+    No:
+        Add 1 to ebx into esi           (11+1 -> 12)
+
+Third call
+eax = 2, ebx = 0 after shift
+eax = 1 after sar
+ebx = 13 after lea(+14)
+(13 <= 14)
+    (13 >= 14)
+
+Call four
+eax = 0, ebx = 0 after shift
+eax = 0 after sar
+ebx = 14 after lea
+(14 <= 14)
+Yes, jump down like normal
+    (14 >= 14)
+    Yes, jump to end of function.
+    Pop rbx(14)
+    Return from third call
+        eax = eax + ebx (13 + 14) = 27
+    return from second call
+        eax = eax + ebx (27 + 11) = 38
+    return from first call
+        eax = eax + ebx (38 + 7) = 45
+    
+
+75 -> 45
+my val gets transformed by func4, then sign sensitive compared to 21
+my val then gets unsign sensitive compared to 21, which must eval to true
+
+-21 -> 45 ???
+0 -> 45
+45 -> 45
+5 -> 45
+5000 -> 45
+-10000 -> 45
+
+
+14 x -> 45
+13 x -> 31
+12 x -> 43
+0 x -> 11
+1 x -> 11
+2 x -> 13
+3 x -> 10
+4 x -> 19
+5 x -> 15
+6 x -> 21    -- This is what we wanted!!!
+
+
+phase 5
+must be 6 chars long
+
+16: x/s $rsp  0x7fffffffdf10:   "o\340\377\377\377\177"
+Look kinda like ascii escapes
+bruins -> ddefyu  ?
+
+aaaaaa -> aduier
+    97 100 117 105 101 114
+ -  97  97  97  97  97  97 
+--------------------------
+    0    3  20   8   4  17
+
+bruins
+    98 114 117 105 110 115
+ +   0   3  20   8   4  17
+--------------------------
+   096 117 137 113 114 132
+== boaajb
+
+
+m_____ -> b_____
+6d     -> 62
+
+
+Is our table
+maduiersnfotvbyl
+0123456789abcdef
+
+d
+2
+
+b r u i n s
+c 5 2 3 7 6
+
+a + 0xc = m
+a + 0x5 = f
+a + 0x2 = c
+a + 0x3 = d
+a + 0x7 = h
+a + 0x6 = g
+
+wraps around at q
+q r s t u v
+>>> print/c $rdx+0x402700
+gets the offset from the current char into the table
+
+
+--- phase 6 ---
++143 is where things start happening
++200 is the comparison
+754 740 722 622 973 974
+
+722 is checked first agaist 622
+740 vs 722
+754 vs 740
+974 vs 754  
+
+j
+--- Secret ----
++54 for comparison
+BST
+1:          36
+21:         8
+22:         50
+32:         22
+33:         45
+31:         6
+34:         107
+45:         40
+41:         1
+47:         99
+44:         35
+42:         7
+43:         20
+46:         47
+48:         233
+
+
+
+Trying to get 2
+1000 -> -9
+999 -> -9
+...
+500 -> -9
+100 -> -5
+
+51 -> -13
+50 -> 1
+49 -> -3
+
+10 -> -14
+5 -> -8
+4 -> -8
+3 -> -8
+2 -> -8
+1.5 -> 0
+1 -> 0
+
+0 -> -1
+-50 -> -51
+-5 -> -6

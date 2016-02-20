@@ -1,0 +1,30 @@
+this process 52783 at i=0 spawned a pID=52784
+    this process 52783 at i=1 spawned a pID=52785
+    this process 52783 at i=2 spawned a pID=52786
+    this process 52783 at i=3 spawned a pID=52787
+this process 52784 at i=0 spawned a pID=0
+    this process 52784 at i=1 spawned a pID=52791
+    this process 52784 at i=2 spawned a pID=52792
+    this process 52784 at i=3 spawned a pID=52793
+this process 52785 at i=1 spawned a pID=0
+    this process 52785 at i=2 spawned a pID=52789
+    this process 52785 at i=3 spawned a pID=52790
+this process 52786 at i=2 spawned a pID=0
+    this process 52786 at i=3 spawned a pID=52788
+this process 52787 at i=3 spawned a pID=0
+this process 52788 at i=3 spawned a pID=0
+this process 52789 at i=2 spawned a pID=0
+    this process 52789 at i=3 spawned a pID=52794
+this process 52790 at i=3 spawned a pID=0
+this process 52791 at i=1 spawned a pID=0
+    this process 52791 at i=2 spawned a pID=52796
+    this process 52791 at i=3 spawned a pID=52797
+this process 52792 at i=2 spawned a pID=0
+    this process 52792 at i=3 spawned a pID=52795
+this process 52793 at i=3 spawned a pID=0
+this process 52794 at i=3 spawned a pID=0
+this process 52795 at i=3 spawned a pID=0
+this process 52796 at i=2 spawned a pID=0
+    this process 52796 at i=3 spawned a pID=52798
+this process 52797 at i=3 spawned a pID=0
+this process 52798 at i=3 spawned a pID=0
